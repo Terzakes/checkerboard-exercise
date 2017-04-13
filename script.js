@@ -1,7 +1,3 @@
-
-// .style.animationDuration = '2s';
-// .style.animationDelay = '2s';
-// .style.animationIterationCount = 'infinite';
 function makeBoard () {
   var numberOfSquares = 81;
 
@@ -22,8 +18,30 @@ function makeBoard () {
   }
 
 }
+
+
 function hideAll () {
   document.body.innerHTML = '';
 }
+
+
+function boardMusic () {
+  var music = document.createElement('audio');
+  music.innerHTML = '<source src="' + 'Time On Her Side.mp3'+ '" type="audio/mpeg">'
+  document.head.appendChild(music);
+  music.play();
+}
+
+boardMusic();
 window.setInterval(makeBoard, 2000);
 window.setInterval(hideAll, 1999);
+
+
+
+
+// var audioElement;
+// if(!audioElement) {
+//   audioElement = document.createElement('audio');
+//   audioElement.innerHTML = '<source src="' + '/audio/sound.mp3'+ '" type="audio/mpeg" />'
+// }
+// audioElement.play();
