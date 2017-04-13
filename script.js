@@ -4,7 +4,7 @@
 // .style.animationIterationCount = 'infinite';
 function makeBoard () {
   var numberOfSquares = 81;
-
+  hideAll();
   for (var i = 0; i < numberOfSquares; i++) {
       var div = document.createElement('div');
       var color;
@@ -26,4 +26,3 @@ function hideAll () {
   document.body.innerHTML = '';
 }
 window.setInterval(makeBoard, 2000);
-window.setInterval(hideAll, 1999);
